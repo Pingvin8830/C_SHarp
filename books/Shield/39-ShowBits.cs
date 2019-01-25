@@ -1,0 +1,18 @@
+// Отображение значений битов, составляющих байт.
+
+using System;
+
+class ShowBits {
+  public static void Main() {
+    int t;
+    byte val;
+
+    val = 123;
+    for(t=128; t > 0; t = t/2) {
+      if((val & t) != 0) Console.Write("1 ");
+      if((val & t) == 0) Console.Write("0 ");
+    }
+    Console.WriteLine();
+  }
+}
+
